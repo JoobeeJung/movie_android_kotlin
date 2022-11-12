@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--NavigationView 항목구성-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:iconTint="@color/white"
+        android:title="Home"/>
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:iconTint="@color/white"
+        android:title="Search"/>
+
+    <item
+        android:id="@+id/nav_login"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:iconTint="@color/white"
+        android:title="Login"/>
+    <item
+        android:id="@+id/nav_mypage"
+        android:icon="@drawable/ic_baseline_person_pin_24"
+        android:iconTint="@color/white"
+        android:title="My Page"/>
+</menu>

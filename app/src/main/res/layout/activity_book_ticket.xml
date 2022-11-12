@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BookTicketActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#3E558F"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="#46DBAF"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Selected Movie > "
+        />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/opensans_bold"
+            android:textSize="20sp"
+            android:text="title"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#06103B"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/opensans_bold"
+            android:textSize="20sp"
+            android:textColor="#46DBAF"
+            android:text="Date >"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/selectedDate"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_gravity="right"
+            android:text="Select Date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3E558F"
+        android:padding="16dp"
+
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="#46DBAF"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Showtimes >"
+            />
+
+        <Spinner
+            android:id="@+id/timeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:popupBackground="#4C5F9D"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#06103B"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="#46DBAF"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Theaters >"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/selectedTheater"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="match_parent"
+                android:text="Selected Theater"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="20sp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/btnCall"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#4C5F9D"
+                android:src="@drawable/ic_baseline_phone_forwarded_24" />
+
+            <ImageButton
+                android:id="@+id/btnMap"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="#4C5F9D"
+                android:src="@drawable/ic_baseline_location_on_24" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDialog"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:layout_gravity="right"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Show Theaters" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3E558F"
+        android:padding="16dp"
+        xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="#46DBAF"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Tickets"
+            />
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp"
+            android:background="#3E558F">
+
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:textColor="#FFFFFF"
+                android:background="@null"
+                android:id="@+id/btnMinus"
+                android:textStyle="bold"
+                android:text="—"/>
+            <TextView
+                android:layout_width="70dp"
+                android:background="@android:color/white"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:fontFamily="@font/opensans_bold"
+                android:textColor="#FFFFFF"
+                android:inputType="number"
+                android:id="@+id/ticketNum"
+                android:gravity="center"
+                android:backgroundTint="#3E558F"
+                />
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:background="@null"
+                android:id="@+id/btnPlus"
+                android:text="+"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBook"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Book Ticket"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
+
+</LinearLayout>

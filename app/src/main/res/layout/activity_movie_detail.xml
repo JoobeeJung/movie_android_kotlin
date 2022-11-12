@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/item_imageView"
+        android:layout_gravity="center"
+        android:layout_width="230dp"
+        android:layout_height="300dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:text="Book Ticket" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/parentShimmerLayout"
+            shimmer:duration="700"
+            android:layout_marginTop="20dp">
+
+            <include layout="@layout/shimmer_detail"/>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <ScrollView
+            android:id="@+id/detail_main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Title : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/item_title_textView"
+                        android:text="title"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Release Date : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/item_relaseDate_textView"
+                        android:text="releaseDate"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Runtime : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/item_runtimeStr_textView"
+                        android:text="runtimeStr"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plot : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/item_plot_textView"
+                        android:text="plot"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Director(s) : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/item_directors_textView"
+                        android:text="directors"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Writer(s) : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/item_writers_textView"
+                        android:text="writers"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stars : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/item_stars_textView"
+                        android:text="stars"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Countries : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/item_countries_textView"
+                        android:text="countries"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Genres : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/item_genres_textView"
+                        android:text="genres"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Keywords : "
+                        android:textColor="#46DBAF"
+                        android:fontFamily="@font/opensans_bold"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/item_keywords_textView"
+                        android:text="keywords"
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <domain-config cleartextTrafficPermitted="true">
+<!--        http 허용할 도메인에 한해서만 domain에 tag 포함-->
+<!--        <domain includeSubdomains="true">10.10.220.86</domain>-->
+        <domain includeSubdomains="true">10.10.220.79</domain>
+
+    </domain-config>
+</network-security-config>
